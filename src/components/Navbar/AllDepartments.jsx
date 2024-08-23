@@ -13,7 +13,7 @@ function AllDepartments() {
         <IoList /> <span className="ml-2">All Departments</span>
       </button>
       {open && (
-        <div className="p-4  transition duration-150 ease-in-out font-medium z-30">
+        <div className="p-4  transition duration-150 ease-in-out font-medium z-30 absolute bg-white w-[200px]">
           <ul>
             {departments.map((department) => (
               <li key={department}>

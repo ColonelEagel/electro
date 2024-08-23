@@ -1,5 +1,5 @@
 import { CiLocationOn, CiMail } from "react-icons/ci";
-import Container from "../ui/Container";
+import Container from "@/components/ui/Container";
 import { IoIosCall } from "react-icons/io";
 import { FaRegUser, FaTruckFast } from "react-icons/fa6";
 

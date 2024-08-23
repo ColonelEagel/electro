@@ -1,8 +1,8 @@
 import { MdOutlineShoppingBag } from "react-icons/md";
-import Container from "./Container";
+import Container from "@/components/ui/Container";
 import { CiHeart} from "react-icons/ci";
 import { FaCodeCompare } from "react-icons/fa6";
-import Search from "./Search";
+import Search from "@/components/Header/Search";
 
 function Shopping() {
   return (

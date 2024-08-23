@@ -1,6 +1,6 @@
-import AllDepartments from "./ui/AllDepartments";
-import Container from "../ui/Container";
-import NavLinks from "./ui/NavLinks";
+import AllDepartments from "@/components/Navbar/AllDepartments";
+import Container from "@/components/ui/Container";
+import NavLinks from "@/components/Navbar/NavLinks";
 
 function Navbar() {
   return (
@@ -9,7 +9,7 @@ function Navbar() {
       <AllDepartments />
       {/* Nav Links */}
       <NavLinks />
-      {/* offer */}
+      {/*Shipping offer */}
       <span className="ml-auto">Free Shipping on Orders $50+</span>
     </Container>
   );

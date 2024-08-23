@@ -1,12 +1,14 @@
 import "./App.css";
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
+import Header from "@/components/header/Header";
+import Navbar from "@/components/Navbar/Navbar";
+import Billboard from "@/components/billboard/billboard";
 
 function App() {
   return (
     <>
       <Header />
       <Navbar />
+      <Billboard />
     </>
   );
 }
