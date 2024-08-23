@@ -1,5 +1,5 @@
 import Info from "./ui/Info";
-import Shopping from "./ui/Shopping";
+import Shopping from "../Shopping";
 
 function Header() {
   return (

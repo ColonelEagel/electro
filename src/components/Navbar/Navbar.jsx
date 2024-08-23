@@ -1,5 +1,5 @@
 import AllDepartments from "./ui/AllDepartments";
-import Container from "./ui/Container";
+import Container from "../ui/Container";
 import NavLinks from "./ui/NavLinks";
 
 function Navbar() {
