@@ -5,8 +5,8 @@ const SingleSlide = ({ imageUrl, imageAlt }) => {
     <div className=" mx-auto max-w-4xl h-[420px] ">
       <div className="flex justify-between items-center w-full h-full">
         {/* text /left */}
-        <div className="h-2/3">
-          <h2 className="text-7xl font-thin uppercase">
+        <div className="h-2/3 w-1/2 mb-auto">
+          <h2 className=" text-5xl lg:text-7xl font-thin uppercase">
             The New <br /> Standard
           </h2>
           <p className="text-lg mt-2">Under Favorable Smartwatches</p>
@@ -18,7 +18,7 @@ const SingleSlide = ({ imageUrl, imageAlt }) => {
         </div>
 
         {/* image /right */}
-        <div className="mt-auto h-full">
+        <div className="mt-auto w-1/2">
           <img src={imageUrl} alt={imageAlt} className="h-full " />
         </div>
       </div>

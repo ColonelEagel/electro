@@ -16,7 +16,9 @@ function BigDeals() {
         <strong>and more</strong>
       </BigDealsCard>
       <BigDealsCard imageUrl={img3} imageAlt="desktop" buttonText="shop now">
-        shope the <br /><strong> hottest</strong><br /> products
+        shope the <br />
+        <strong> hottest</strong>
+        <br /> products
       </BigDealsCard>
     </Container>
   );

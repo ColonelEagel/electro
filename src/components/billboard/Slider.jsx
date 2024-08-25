@@ -17,7 +17,7 @@ const images = [
 ];
 function Slider() {
   return (
-    <Container className="md:w-[calc(100%*2/3-200px)]  relative">
+    <Container className="lg:w-[calc(100%*2/3-200px)]  relative">
       <Carousel
         additionalTransfrom={0}
         arrows={false}

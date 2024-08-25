@@ -13,7 +13,7 @@ function ProductCard({
   isLarge,
 }) {
   return (
-    <div className="relative group text-xs bg-white hover:shadow-2xl p-4 rounded-3xl w-full  h-auto">
+    <div className="relative group text-xs bg-white hover:shadow-2xl p-4 rounded-3xl w-full  h-auto flex flex-col justify-center items-center">
       <div className="">
         {/* head */}
         <div className="text-sm">
@@ -23,7 +23,7 @@ function ProductCard({
           </p>
         </div>
         {/* image */}
-        <div className="w-full">
+        <div className=" lg:w-full">
           <img src={imageUrl} alt="" draggable="false" />
         </div>
         {/* price */}

@@ -12,32 +12,26 @@ function BestSellersCard({
   imageUrl,
 }) {
   return (
-    <div className="relative group text-xs bg-white hover:shadow-2xl p-6 rounded-3xl w-full  h-auto">
-      <div className="flex justify-center items-center">
-        {/* image */}
+    <div className="relative group text-xs bg-white hover:shadow-2xl p-4 md:p-6 rounded-3xl w-full">
+      <div className="flex flex-col sm:flex-row justify-center items-center">
         <div className="h-auto max-w-full">
-          <img src={imageUrl} alt="" />
+          <img src={imageUrl} alt={description} />
         </div>
-        <div className="">
-          {/* head */}
-          <div className="">
+        <div className="mt-4 sm:mt-0 sm:ml-4">
+          <div>
             <span className="text-sm text-gray-400">{type}</span>
-            <p className="text-blue-800 font-bold w-2/3 break-words">
-              {description}
-            </p>
+            <p className="text-blue-800 font-bold break-words">{description}</p>
           </div>
-          {/* price */}
-          <div className=" pb-2 flex justify-between items-center">
+          <div className="pb-2 flex justify-between items-center">
             <div>
-              {onSale && (
+              {onSale ? (
                 <div className="text-red-600 text-lg font-bold">
                   {price}
                   <span className="text-gray-500 line-through mx-2 text-xs">
                     {oldPrice}
                   </span>
                 </div>
-              )}
-              {!onSale && (
+              ) : (
                 <div className="text-gray-800 text-lg font-semibold">
                   {price}
                 </div>
@@ -49,20 +43,15 @@ function BestSellersCard({
           </div>
         </div>
       </div>
-
-      {/* footer */}
-      <div className="pt-2">
-        {/* compare add to wishlist */}
-        <div className=" absolute left-0 visible hidden  items-center group-hover:block  py-8 px-4 h-auto w-full z-20 bg-white">
-          <div className="w-11/12 flex justify-between items-center gap-2 pt-3 border-yellow-200 border-t-2  ">
-            <p className="flex justify-center items-center text-xs cursor-pointer">
-              <FaCodeCompare className="rotate-[70deg] mr-2" size={15} />
-              Compare
-            </p>
-            <p className="flex justify-end items-center cursor-pointer text-nowrap">
-              <CiHeart className="mr-1" /> Wishlist
-            </p>
-          </div>
+      <div className="pt-2 hidden group-hover:block">
+        <div className="flex justify-between items-center gap-2 pt-3 border-yellow-200 border-t-2">
+          <p className="flex items-center text-xs cursor-pointer">
+            <FaCodeCompare className="rotate-[70deg] mr-2" size={15} />
+            Compare
+          </p>
+          <p className="flex items-center cursor-pointer">
+            <CiHeart className="mr-1" /> Wishlist
+          </p>
         </div>
       </div>
     </div>

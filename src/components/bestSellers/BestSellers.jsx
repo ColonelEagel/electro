@@ -65,10 +65,10 @@ const products = [
 
 function BestSellers() {
   return (
-    <Container className=" flex-col  p-2 lg:p-8 md:w-full xl:w-3/4 justify-center items-center">
+    <Container className=" flex-col  p-2 lg:p-8  md:w-full xl:w-3/4 justify-center items-center">
       <BestSellersHeader />
       {/* BestSellersCard */}
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
         {products.map((product) => (
           <BestSellersCard
             key={product.id}

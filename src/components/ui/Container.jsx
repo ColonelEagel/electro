@@ -1,7 +1,7 @@
 import {cn} from '@/lib/utils'
 function Container({ children, className }) {
   return (
-    <div className={cn('md:w-3/4 flex mx-auto', className)}>{children}</div>
+    <div className={cn('lg:w-3/4 flex mx-auto', className)}>{children}</div>
   )
 }
 

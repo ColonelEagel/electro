@@ -3,10 +3,10 @@ import Shopping from "@/components/Header/Shopping";
 
 function Header() {
   return (
-    <>
+    <header className="w-full ">
       <Info />
       <Shopping />
-    </>
+    </header>
   );
 }
 
