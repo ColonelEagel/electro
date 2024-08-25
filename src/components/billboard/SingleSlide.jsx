@@ -1,6 +1,6 @@
-const Slide = ({ imageUrl, imageAlt }) => {
-  // console.log(imageUrl, imageAlt);
+import Button from "@/components/ui/Button";
 
+const SingleSlide = ({ imageUrl, imageAlt }) => {
   return (
     <div className=" mx-auto max-w-4xl h-[420px] ">
       <div className="flex justify-between items-center w-full h-full">
@@ -14,9 +14,7 @@ const Slide = ({ imageUrl, imageAlt }) => {
             from <br />{" "}
             <span className="text-2xl font-semibold mt-4">$749.99</span>
           </p>
-          <button className="mt-6 bg-yellow-500 text-white py-2 px-6 rounded">
-            Start Buying
-          </button>
+          <Button className="mt-6  ">Start Buying</Button>
         </div>
 
         {/* image /right */}
@@ -28,4 +26,4 @@ const Slide = ({ imageUrl, imageAlt }) => {
   );
 };
 
-export default Slide;
+export default SingleSlide;

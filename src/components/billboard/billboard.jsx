@@ -1,4 +1,4 @@
-import billboardBg from "@/assets/images/billboardBg.jpg";
+import billboardBg from "@/assets/images/billboard/billboardBg.jpg";
 import Slider from "./Slider";
 function Billboard() {
   return (

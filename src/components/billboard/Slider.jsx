@@ -1,12 +1,13 @@
 import Container from "@/components/ui/Container";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Slide from "./slide";
+import SingleSlide from "./SingleSlide";
+
 // Import images directly
-import img1 from "@/assets/images/img1.png";
-import img2 from "@/assets/images/img2.png";
-import img3 from "@/assets/images/img3.png";
-import CustomDot from "./CustomDot";
+import img1 from "@/assets/images/billboard/img1.png";
+import img2 from "@/assets/images/billboard/img2.png";
+import img3 from "@/assets/images/billboard/img3.png";
+import CustomDot from "@/components/ui/CustomDot";
 
 // Array of images
 const images = [
@@ -68,7 +69,7 @@ function Slider() {
         swipeable
       >
         {images.map((image) => (
-          <Slide key={image.id} imageUrl={image.img} alt={image.alt} />
+          <SingleSlide key={image.id} imageUrl={image.img} alt={image.alt} />
         ))}
       </Carousel>
     </Container>
