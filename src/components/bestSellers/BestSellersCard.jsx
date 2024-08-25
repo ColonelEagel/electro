@@ -3,7 +3,14 @@ import Button from "@/components/ui/Button";
 import { FaCodeCompare } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 
-function BestSellersCard({ type, description, price, imageUrl }) {
+function BestSellersCard({
+  type,
+  description,
+  price,
+  oldPrice,
+  onSale,
+  imageUrl,
+}) {
   return (
     <div className="relative group text-xs bg-white hover:shadow-2xl p-6 rounded-3xl w-full  h-auto">
       <div className="flex justify-center items-center">
@@ -21,7 +28,21 @@ function BestSellersCard({ type, description, price, imageUrl }) {
           </div>
           {/* price */}
           <div className=" pb-2 flex justify-between items-center">
-            <p>{price}</p>
+            <div>
+              {onSale && (
+                <div className="text-red-600 text-lg font-bold">
+                  {price}
+                  <span className="text-gray-500 line-through mx-2 text-xs">
+                    {oldPrice}
+                  </span>
+                </div>
+              )}
+              {!onSale && (
+                <div className="text-gray-800 text-lg font-semibold">
+                  {price}
+                </div>
+              )}
+            </div>
             <Button className="p-3 text-center rounded-full bg-gray-300 group-hover:bg-yellow-400">
               <FaCartArrowDown className="text-white" />
             </Button>
@@ -39,7 +60,7 @@ function BestSellersCard({ type, description, price, imageUrl }) {
               Compare
             </p>
             <p className="flex justify-end items-center cursor-pointer text-nowrap">
-              <CiHeart className="mr-1" /> Add to Wishlist
+              <CiHeart className="mr-1" /> Wishlist
             </p>
           </div>
         </div>

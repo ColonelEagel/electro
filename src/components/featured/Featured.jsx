@@ -31,8 +31,10 @@ const products = [
     id: 2,
     type: "laptops",
     description: "tablet white eliteBook revolve 810 g2 ",
-    price: "$685,00",
+    price: "$1 999,00",
+    oldPrice: "$2 299,00",
     imageUrl: img2,
+    onSale: true,
   },
   {
     id: 3,
@@ -79,7 +81,9 @@ function Featured() {
             type={product.type}
             description={product.description}
             price={product.price}
+            oldPrice={product.onSale ? product.oldPrice : null}
             imageUrl={product.imageUrl}
+            onSale={product.onSale}
           />
         ))}
       </div>

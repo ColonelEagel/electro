@@ -38,9 +38,11 @@ const products = [
     id: 4,
     type: "Smartwatches",
     description: "Smartwatch 2.0 LTE Wifi",
-    price: "$110,00",
+    price: "$129,00",
+    oldPrice: "$449,00",
     imageUrl: img4,
     imgALt: "smartwatch",
+    onSale: true,
   },
   {
     id: 5,
@@ -49,6 +51,7 @@ const products = [
     price: "$799,00",
     imageUrl: img5,
     imgALt: "vr",
+    onSale: true,
   },
   {
     id: 6,
@@ -72,6 +75,8 @@ function BestSellers() {
             type={product.type}
             description={product.description}
             price={product.price}
+            oldPrice={product.onSale ? product.oldPrice : null}
+            onSale={product.onSale}
             imageUrl={product.imageUrl}
             imgALt={product.imgALt}
           />
