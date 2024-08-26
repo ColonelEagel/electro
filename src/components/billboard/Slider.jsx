@@ -1,13 +1,15 @@
 // Import components
 import Container from "@/components/ui/Container";
 import Carousel from "react-multi-carousel";
+import SingleSlide  from "./SingleSlide";
 import "react-multi-carousel/lib/styles.css";
-import SingleSlide from "./SingleSlide";
 
 // Import images directly
-import img1 from "@/assets/images/billboard/img1.png";
-import img2 from "@/assets/images/billboard/img2.png";
-import img3 from "@/assets/images/billboard/img3.png";
+// The images are used in the billboard slider.
+// The images are in the public folder, so they can be imported directly.
+import img1 from "@/assets/images/billboard/img1.png"; // smart watch
+import img2 from "@/assets/images/billboard/img2.png"; // smart phone
+import img3 from "@/assets/images/billboard/img3.png"; // smart speaker
 
 // Array of images
 const images = [

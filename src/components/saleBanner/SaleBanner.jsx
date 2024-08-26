@@ -3,7 +3,7 @@ import Container from "@/components/ui/Container";
 
 // Import images directly
 // The image is used in the SaleBanner component in the homepage.
-import saleBannerImg from "@/assets/images/SaleBanner/img1.jpg";
+import saleBannerImg from "@/assets/images/saleBanner/img1.jpg";
 /**
  * This component renders a sale banner with a background image
  * and a text on top of it. The text is centered and has a yellow

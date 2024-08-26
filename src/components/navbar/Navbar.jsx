@@ -1,7 +1,7 @@
 // Components
 import Container from "@/components/ui/Container";
-import AllDepartments from "@/components/Navbar/AllDepartments";
-import NavLinks from "@/components/Navbar/NavLinks";
+import AllDepartments from "@/components/navbar/AllDepartments";
+import NavLinks from "@/components/navbar/NavLinks";
 
 function Navbar() {
   return (

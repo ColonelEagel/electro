@@ -5,7 +5,7 @@ import { FaCodeCompare } from "react-icons/fa6";
 
 // import components
 import Container from "@/components/ui/Container";
-import Search from "@/components/Header/Search";
+import Search from "@/components/header/Search";
 
 function Shopping() {
   return (
