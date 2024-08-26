@@ -1,26 +1,29 @@
+// Import images for featured products, on sale products, and top selling products
+// Featured products
+import FeaturedProductsimg1 from "@/assets/images/quickVIew/featuredProducts/img1.png"; // tablet
+import FeaturedProductsimg2 from "@/assets/images/quickVIew/featuredProducts/img2.png"; // laptop
+import FeaturedProductsimg3 from "@/assets/images/quickVIew/featuredProducts/img3.png"; // headphones
+
+// On sale products
+import onSaleProductsimg1 from "@/assets/images/quickVIew/onSaleProducts/img1.png"; // game console
+import onSaleProductsimg2 from "@/assets/images/quickVIew/onSaleProducts/img2.png"; // tablet
+import onSaleProductsimg3 from "@/assets/images/quickVIew/onSaleProducts/img3.png"; // audio system
+
+// Top selling products
+import topSellingProductsimg1 from "@/assets/images/quickVIew/topSellingProducts/img1.png"; // ultrabook
+import topSellingProductsimg2 from "@/assets/images/quickVIew/topSellingProducts/img2.png"; // laptop
+import topSellingProductsimg3 from "@/assets/images/quickVIew/topSellingProducts/img3.png"; // smartphones
+
+
+// Import components
 import SectionHead from "@/components/ui/SectionHead";
 import Container from "@/components/ui/Container";
 
 import QuickViewCard from "./QuickViewCard";
 
-// FeaturedProducts img
-import FeaturedProductsimg1 from "@/assets/images/quickVIew/featuredProducts/img1.png";
-import FeaturedProductsimg2 from "@/assets/images/quickVIew/featuredProducts/img2.png";
-import FeaturedProductsimg3 from "@/assets/images/quickVIew/featuredProducts/img3.png";
-
-// onSaleProducts img
-import onSaleProductsimg1 from "@/assets/images/quickVIew/onSaleProducts/img1.png";
-import onSaleProductsimg2 from "@/assets/images/quickVIew/onSaleProducts/img2.png";
-import onSaleProductsimg3 from "@/assets/images/quickVIew/onSaleProducts/img3.png";
-
-// topSellingProducts
-import topSellingProductsimg1 from "@/assets/images/quickVIew/topSellingProducts/img1.png";
-import topSellingProductsimg2 from "@/assets/images/quickVIew/topSellingProducts/img2.png";
-import topSellingProductsimg3 from "@/assets/images/quickVIew/topSellingProducts/img3.png";
-
-// Array of featured products
-
 function QuickView() {
+  // Featured products
+  // An array of objects, each representing a product
   const FeaturedProducts = [
     {
       id: 1,
@@ -42,8 +45,9 @@ function QuickView() {
     },
   ];
 
-  // Array of onSale products
 
+  // On sale products
+  // An array of objects, each representing a product
   const onSaleProducts = [
     {
       id: 1,
@@ -65,7 +69,9 @@ function QuickView() {
     },
   ];
 
-  // Array of topSelling products
+
+  // Top selling products
+  // An array of objects, each representing a product
   const topSellingProducts = [
     {
       id: 1,
@@ -86,33 +92,42 @@ function QuickView() {
       imgUrl: topSellingProductsimg3,
     },
   ];
+
   return (
     <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 md:p-8 w-full">
-  <div className="w-full">
-    <SectionHead>Featured Products</SectionHead>
-    <ul className="mt-4 lg:mt-7 flex flex-col justify-start items-center md:items-start">
-      {FeaturedProducts.map((product) => (
-        <QuickViewCard key={product.id} product={product} />
-      ))}
-    </ul>
-  </div>
-  <div className="w-full">
-    <SectionHead>onSale products</SectionHead>
-    <ul className="mt-4 lg:mt-7 flex flex-col justify-start items-center md:items-start">
-      {onSaleProducts.map((product) => (
-        <QuickViewCard key={product.id} product={product} />
-      ))}
-    </ul>
-  </div>
-  <div className="w-full">
-    <SectionHead>top rated products</SectionHead>
-    <ul className="mt-4 lg:mt-7 flex flex-col justify-start items-center md:items-start">
-      {topSellingProducts.map((product) => (
-        <QuickViewCard key={product.id} product={product} />
-      ))}
-    </ul>
-  </div>
-</Container>
+      {/* featured products section */}
+      <div className="w-full">
+        <SectionHead>Featured Products</SectionHead>
+        <ul className="mt-4 lg:mt-7 flex flex-col justify-start items-center md:items-start">
+          {/* map over the array of featured products and render a QuickViewCard component for each one */}
+          {FeaturedProducts.map((product) => (
+            <QuickViewCard key={product.id} product={product} />
+          ))}
+        </ul>
+      </div>
+
+      {/* onSale products section */}
+      <div className="w-full">
+        <SectionHead>onSale products</SectionHead>
+        <ul className="mt-4 lg:mt-7 flex flex-col justify-start items-center md:items-start">
+          {/* map over the array of onSale products and render a QuickViewCard component for each one */}
+          {onSaleProducts.map((product) => (
+            <QuickViewCard key={product.id} product={product} />
+          ))}
+        </ul>
+      </div>
+
+      {/* top rated products section */}
+      <div className="w-full">
+        <SectionHead>top rated products</SectionHead>
+        <ul className="mt-4 lg:mt-7 flex flex-col justify-start items-center md:items-start">
+          {/* map over the array of topSellingProducts and render a QuickViewCard component for each one */}
+          {topSellingProducts.map((product) => (
+            <QuickViewCard key={product.id} product={product} />
+          ))}
+        </ul>
+      </div>
+    </Container>
 
   );
 }

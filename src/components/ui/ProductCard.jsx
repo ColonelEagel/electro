@@ -1,9 +1,36 @@
+/**
+ * A component that renders a single product card.
+ *
+ * @param {Object} props The component props.
+ * @param {string} props.type The type of product.
+ * @param {string} props.description The description of the product.
+ * @param {string} props.price The price of the product.
+ * @param {string} [props.oldPrice] The old price of the product if it's on sale.
+ * @param {boolean} [props.onSale] Whether the product is on sale or not.
+ * @param {string} props.imageUrl The URL of the image to be rendered.
+ * @param {boolean} [props.isLarge] Whether the card should be large or not.
+ * @param {string} [props.className] The extra classnames to be passed to the component.
+ * @returns {ReactElement} The JSX element to be rendered.
+ */
+
+// Icons
 import { FaCartArrowDown } from "react-icons/fa";
-import Button from "@/components/ui/Button";
 import { FaCodeCompare } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 
+// Components
+import Button from "@/components/ui/Button";
+
+// Utilities
+/**
+ * A utility function that takes a list of classnames and returns them
+ * concatenated into a single string.
+ *
+ * @param {string[]} classnames The list of classnames to be concatenated.
+ * @returns {string} The concatenated string of classnames.
+ */
 import { cn } from "@/lib/utils";
+
 function ProductCard({
   type,
   description,
@@ -79,7 +106,7 @@ function ProductCard({
           <div className="w-full flex justify-between items-center gap-2 pt-3 border-yellow-200 border-t-2">
             <p className="flex justify-center items-center text-xs cursor-pointer">
               <FaCodeCompare className="rotate-[70deg] mr-2" size={15} />
-              Compare {isLarge && "Add to Cart"}
+              Compare {isLarge ? "Add to Cart" : ""}
             </p>
             <p className="flex justify-end items-center cursor-pointer">
               <CiHeart className="mr-1" /> Add to Wishlist

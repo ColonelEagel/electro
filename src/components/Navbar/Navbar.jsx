@@ -1,5 +1,6 @@
-import AllDepartments from "@/components/Navbar/AllDepartments";
+// Components
 import Container from "@/components/ui/Container";
+import AllDepartments from "@/components/Navbar/AllDepartments";
 import NavLinks from "@/components/Navbar/NavLinks";
 
 function Navbar() {
@@ -8,9 +9,7 @@ function Navbar() {
       {/* All Departments */}
       <AllDepartments />
       {/* Nav Links */}
-      
         <NavLinks />
-      
       {/* Shipping Offer */}
       <span className="mt-4 lg:mt-0 lg:ml-4 text-sm md:text-base text-center w-full lg:w-auto">
         Free Shipping on Orders $50+

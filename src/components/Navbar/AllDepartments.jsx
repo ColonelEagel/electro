@@ -1,4 +1,7 @@
+// import react hooks
 import { useState } from "react";
+
+// import react icons
 import { IoList } from "react-icons/io5";
 
 function AllDepartments() {

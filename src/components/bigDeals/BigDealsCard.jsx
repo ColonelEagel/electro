@@ -8,7 +8,38 @@
  * @param {number} [props.discount] The discount percentage to be rendered.
  * @returns {ReactElement} The JSX element to be rendered.
  */
-function BigDealsCard({ imageUrl, imageAlt, children, buttonText, discount }) {
+function BigDealsCard({
+  imageUrl,
+  imageAlt,
+  children,
+  buttonText,
+  discount,
+}) {
+  // Render the discount text if it is provided
+  const discountElement = (
+    <>
+      <div className="mr-2 leading-3">
+        up <br /> to
+      </div>{" "}
+      <div className="text-lg font-bold">
+        {discount}
+        <small className="align-top">%</small>
+      </div>
+    </>
+  );
+
+  // Render the button text with an arrow icon
+  const buttonTextElement = (
+    <>
+      {discount ? discountElement : (
+        <span className="font-bold">{buttonText}</span>
+      )}
+      <span className="ml-2 w-4 h-4 inline-flex justify-center items-center rounded-full bg-yellow-300 text-white">
+        &gt;
+      </span>
+    </>
+  );
+
   return (
     <div className="flex justify-center gap-4 py-5  items-center bg-gray-200  ">
       {/* image */}
@@ -19,24 +50,7 @@ function BigDealsCard({ imageUrl, imageAlt, children, buttonText, discount }) {
       <div className="w">
         <p className="uppercase ">{children}</p>
         <button className="text-center flex justify-center items-center">
-          {discount ? (
-            <>
-              {/* render the discount text if it is provided */}
-              <div className="mr-2 leading-3">
-                up <br /> to
-              </div>{" "}
-              <div className="text-lg font-bold">
-                {discount}
-                <small className="align-top">%</small>
-              </div>
-            </>
-          ) : (
-            <span className="font-bold">{buttonText}</span>
-          )}
-          {/* render the button text with an arrow icon */}
-          <span className="ml-2 w-4 h-4 inline-flex justify-center items-center rounded-full bg-yellow-300 text-white">
-            &gt;
-          </span>
+          {buttonTextElement}
         </button>
       </div>
     </div>
@@ -44,3 +58,4 @@ function BigDealsCard({ imageUrl, imageAlt, children, buttonText, discount }) {
 }
 
 export default BigDealsCard;
+

@@ -19,7 +19,9 @@ import img6 from "@/assets/images/featured/img6.jpg"; // printers
  * with a special offer card at the top and the products in a grid below
  *
  */
-const products = [
+
+
+function Featured() {const products = [
   {
     id: 1,
     type: "speakers",
@@ -65,8 +67,6 @@ const products = [
     imageUrl: img6,
   },
 ];
-
-function Featured() {
   return (
     <Container className="flex flex-col md:flex-row p-2 lg:p-8 md:w-full xl:w-3/4 justify-center items-center">
       {/* special offer card */}
@@ -92,3 +92,4 @@ function Featured() {
 }
 
 export default Featured;
+

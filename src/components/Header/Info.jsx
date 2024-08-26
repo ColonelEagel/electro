@@ -1,7 +1,10 @@
-import { CiLocationOn, CiMail } from "react-icons/ci";
-import Container from "@/components/ui/Container";
-import { IoIosCall } from "react-icons/io";
-import { FaRegUser, FaTruckFast } from "react-icons/fa6";
+// React Icons
+import { IoIosCall } from "react-icons/io"; // phone icon
+import { CiLocationOn, CiMail } from "react-icons/ci"; // location icon and mail icon
+import { FaRegUser, FaTruckFast } from "react-icons/fa6"; // user icon and truck icon
+
+// Components
+import Container from "@/components/ui/Container"; // container component from UI folder
 
 function Info() {
   return (

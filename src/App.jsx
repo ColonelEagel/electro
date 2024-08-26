@@ -1,3 +1,7 @@
+/**
+ * @description The main App component. It renders all the components that are present on the main page of the website.
+ * @returns {JSX.Element} The App component.
+ */
 import "./App.css";
 import Header from "@/components/header/Header";
 import Navbar from "@/components/Navbar/Navbar";
