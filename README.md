@@ -7,6 +7,7 @@ Electro is a comprehensive e-commerce platform designed to showcase and sell a w
 ## Project Structure
 
 The project follows a modular structure for easy scalability and maintainability. Below is an overview of the key directories and files:
+```plaintext
 public/
 │
 ├── images/ # Public images accessible by the app
@@ -43,7 +44,7 @@ src/
 ├──postcss.config.js # PostCSS configuration
 ├──tailwind.config.js # Tailwind CSS configuration
 └──README.md # Project documentation
-
+```
 ## Key Features
 
 - **Responsive Design**: Fully responsive layout, optimized for both desktop and mobile devices.
@@ -76,21 +77,40 @@ To run this project locally, follow these steps:
 .Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/ecommerce-web-app.git
+git clone https://github.com/ColonelEagel/electro.git
 ```
 
-2. Navigate to the project directory:
+Navigate to the project directory:
 
 ```bash
-cd ecommerce-web-app
+cd electro
 ```
+Install dependencies:
 
 ```bash
 npm install
+# or
+yarn install
+# or
+pnpm install
 ```
+Run the development server:
 
 ```bash
 npm run dev
+
+# or
+
+yarn dev
+
+# or
+
+pnpm dev
+
+# or
+
+bun dev
+
 ```
 
 ## Deployment
@@ -101,10 +121,29 @@ For deployment, you can use services like Vercel, Netlify, or any hosting platfo
 
 If you wish to contribute to this project, please follow these guidelines:
 
-1. **Fork the repository** and clone your fork.
-2. **Create a new branch** for your feature or bug fix.
-3. **Make your changes** and test thoroughly.
-4. **Submit a pull request** with a clear description of the changes.
+Fork the repository.
+Create a new branch with a descriptive name:
+
+```bash
+git checkout -b my-new-feature
+```
+
+Make your changes:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+Commit your changes with a meaningful commit message:
+
+```bash
+git commit -m "Add my new feature"
+```
+
+Push to your branch:
+
+```bash
+git push origin my-new-feature
+```
+
+Create a pull request.
 
 ## Contact
 
