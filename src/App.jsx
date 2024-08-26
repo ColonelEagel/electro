@@ -7,7 +7,7 @@ import Header from "@/components/header/Header";
 import Navbar from "@/components/navbar/Navbar";
 import Billboard from "@/components/billboard/billboard";
 import Featured from "@/components/featured/Featured";
-import BestDealsGrid from "@/components/bestDeals/BestdealsGrid";
+import BestDealsGrid from "@/components/bestDeals/BestDealsGrid";
 import BigDeals from "@/components/bigDeals/BigDeals";
 import BestSellers from "@/components/bestSellers/BestSellers";
 import SaleBanner from "@/components/saleBanner/SaleBanner";
