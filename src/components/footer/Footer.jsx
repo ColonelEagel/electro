@@ -1,10 +1,6 @@
 // react icons
-import {
-  BiLogoLinkedin, // linkedin
-  FaFacebookF, // facebook
-  FaPaypal, // paypal
-  FaTwitter, // twitter
-} from "react-icons/fa6";
+import { BiLogoLinkedin } from "react-icons/bi";
+import { FaFacebookF, FaPaypal, FaTwitter } from "react-icons/fa6";
 import { MdOutlineRssFeed } from "react-icons/md"; // rss feed
 import { RiMastercardFill } from "react-icons/ri"; // mastercard
 import { SiVisa } from "react-icons/si"; // visa
@@ -177,7 +173,6 @@ const Footer = () => {
         </Container>
       </div>
     </footer>
-
   );
 };
 

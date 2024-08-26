@@ -7,6 +7,7 @@ Electro is a comprehensive e-commerce platform designed to showcase and sell a w
 ## Project Structure
 
 The project follows a modular structure for easy scalability and maintainability. Below is an overview of the key directories and files:
+
 ```plaintext
 public/
 │
@@ -45,6 +46,7 @@ src/
 ├──tailwind.config.js # Tailwind CSS configuration
 └──README.md # Project documentation
 ```
+
 ## Key Features
 
 - **Responsive Design**: Fully responsive layout, optimized for both desktop and mobile devices.
@@ -85,6 +87,7 @@ Navigate to the project directory:
 ```bash
 cd electro
 ```
+
 Install dependencies:
 
 ```bash
@@ -94,6 +97,7 @@ yarn install
 # or
 pnpm install
 ```
+
 Run the development server:
 
 ```bash
