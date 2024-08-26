@@ -1,5 +1,5 @@
-import Info from "@/components/Header/Info";
-import Shopping from "@/components/Header/Shopping";
+import Info from "./Info";
+import Shopping from "./Shopping";
 
 function Header() {
   return (
