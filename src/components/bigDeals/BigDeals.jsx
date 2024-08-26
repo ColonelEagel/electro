@@ -3,7 +3,7 @@
  *
  * @returns {ReactElement} The JSX element to be rendered.
  */
-import BigDealsCard from "./bigDealsCard";
+import BigDealsCard from "./BigDealsCard";
 import Container from "../ui/Container";
 
 /**
