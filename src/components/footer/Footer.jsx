@@ -1,3 +1,5 @@
+import Container from "@/components/ui/Container";
+
 import { BiLogoLinkedin } from "react-icons/bi";
 import { FaFacebookF, FaPaypal, FaTwitter } from "react-icons/fa6";
 import { MdOutlineRssFeed } from "react-icons/md";
@@ -9,7 +11,7 @@ import { TiSocialGooglePlus } from "react-icons/ti";
 const Footer = () => {
   return (
     <footer className="text-gray-600 pt-8">
-      <div className="container mx-auto flex flex-wrap justify-between items-start">
+      <Container className="container mx-auto flex flex-wrap justify-between items-start gap-6">
         <div className=" mb-6 md:mb-0">
           <h1 className="text-3xl font-bold">
             electro<span className="text-yellow-300">.</span>
@@ -55,7 +57,7 @@ const Footer = () => {
         </div>
         <div className=" md:w-1/4 mb-6 md:mb-0">
           <h5 className="font-bold mb-2">Find it Fast</h5>
-          <div className="flex justify-between items-center ">
+          <div className="flex justify-between items-center flex-wrap gap-4 ">
             <ul>
               <li>
                 <a href="#" className="hover:underline">
@@ -132,9 +134,9 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </Container>
       <div className=" mx-auto flex justify-between items-center mt-8 bg-gray-200 p-6">
-        <div className="container mx-auto flex justify-between items-center">
+        <Container className=" mx-auto flex justify-between items-center gap-2">
           <p>
             © <strong>Electro</strong> - All Rights Reserved
           </p>
@@ -143,7 +145,7 @@ const Footer = () => {
             <SiVisa />
             <FaPaypal />
           </div>
-        </div>
+        </Container>
       </div>
     </footer>
   );

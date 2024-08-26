@@ -12,14 +12,18 @@ const SingleSlide = ({ imageUrl, imageAlt }) => {
           <p className="text-lg mt-2">Under Favorable Smartwatches</p>
           <p className="">
             from <br />{" "}
-            <span className="text-2xl font-semibold mt-4">$749.99</span>
+            <div className="flex items-start font-bold">
+              <span className="text-3xl">$</span>
+              <span className="text-6xl font-bold leading-none">749</span>
+              <span className="text-3xl">99</span>
+            </div>
           </p>
-          <Button className="mt-6  ">Start Buying</Button>
+          <Button className="mt-6  px-8">Start Buying</Button>
         </div>
 
         {/* image /right */}
         <div className="mt-auto w-1/2">
-          <img src={imageUrl} alt={imageAlt} className="h-full " />
+          <img src={imageUrl} alt={imageAlt} className="h-full " draggable="false"/>
         </div>
       </div>
     </div>

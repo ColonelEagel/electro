@@ -6,7 +6,7 @@ function Search() {
       <input
         type="text"
         placeholder="Search for products "
-        className="border-0 px-9 py-1  w-full outline-none rounded-l-full "
+        className="border-0 px-9 py-2  w-full outline-none rounded-l-full "
       />
       <div className="flex gap-7">
         <select

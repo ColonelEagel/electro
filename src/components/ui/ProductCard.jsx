@@ -3,6 +3,7 @@ import Button from "@/components/ui/Button";
 import { FaCodeCompare } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 
+import { cn } from "@/lib/utils";
 function ProductCard({
   type,
   description,
@@ -11,23 +12,43 @@ function ProductCard({
   onSale,
   imageUrl,
   isLarge,
+  className,
 }) {
   return (
-    <div className="relative group text-xs bg-white hover:shadow-2xl p-4 rounded-3xl w-full  h-auto flex flex-col justify-center items-center">
-      <div className="">
+    <div
+      className={cn(
+        "relative group text-xs bg-white hover:shadow-2xl p-4 w-full flex flex-col justify-between items-center",
+        isLarge ? "h-full lg:col-span-2" : "h-auto", // Adjust height and col-span for large cards
+        className
+      )}
+    >
+      <div className="w-full">
         {/* head */}
         <div className="text-sm">
-          <span className=" text-gray-400">{type}</span>
-          <p className="text-blue-600 font-bold w-2/3 break-words">
+          <span className="text-gray-400">{type}</span>
+          <p
+            className={`text-blue-600 font-bold break-words ${
+              isLarge ? "text-xl" : ""
+            }`}
+          >
             {description}
           </p>
         </div>
         {/* image */}
-        <div className=" lg:w-full">
-          <img src={imageUrl} alt="" draggable="false" />
+        <div
+          className={`flex justify-center items-center w-full ${
+            isLarge ? "w-full" : "h-48"
+          }`}
+        >
+          <img
+            src={imageUrl}
+            alt=""
+            draggable="false"
+            className="object-contain w-full h-full"
+          />
         </div>
         {/* price */}
-        <div className=" pb-2 flex justify-between items-center">
+        <div className="pb-2 flex justify-between items-center w-full">
           <div>
             {onSale && (
               <div className="text-red-600 text-lg font-bold">
@@ -41,22 +62,26 @@ function ProductCard({
               <div className="text-gray-800 text-lg font-semibold">{price}</div>
             )}
           </div>
-          <Button className="p-3 text-center rounded-full bg-gray-300 group-hover:bg-yellow-400">
+          <Button
+            className={`p-3 text-center rounded-full bg-gray-300 group-hover:bg-yellow-400 ${
+              isLarge ? "text-lg" : ""
+            }`}
+          >
             <FaCartArrowDown className="text-white" />
           </Button>
         </div>
       </div>
 
       {/* footer */}
-      <div className="pt-2">
+      <div className="pt-2 w-full">
         {/* compare add to wishlist */}
-        <div className=" absolute left-0 visible hidden  items-center group-hover:block  py-8 px-4 h-auto w-full z-20 bg-white">
-          <div className="w-11/12 flex justify-between items-center gap-2 pt-3 border-yellow-200 border-t-2  ">
+        <div className="absolute left-0 hidden group-hover:block py-8 px-4 h-auto w-full z-20 bg-white">
+          <div className="w-full flex justify-between items-center gap-2 pt-3 border-yellow-200 border-t-2">
             <p className="flex justify-center items-center text-xs cursor-pointer">
               <FaCodeCompare className="rotate-[70deg] mr-2" size={15} />
               Compare {isLarge && "Add to Cart"}
             </p>
-            <p className="flex justify-end items-center cursor-pointer text-nowrap">
+            <p className="flex justify-end items-center cursor-pointer">
               <CiHeart className="mr-1" /> Add to Wishlist
             </p>
           </div>

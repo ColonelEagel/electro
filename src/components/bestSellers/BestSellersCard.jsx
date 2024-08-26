@@ -17,12 +17,12 @@ function BestSellersCard({
         <div className="h-auto max-w-full">
           <img src={imageUrl} alt={description} />
         </div>
-        <div className="mt-4 sm:mt-0 sm:ml-4">
+        <div className="mt-8 sm:ml-4">
           <div>
             <span className="text-sm text-gray-400">{type}</span>
             <p className="text-blue-800 font-bold break-words">{description}</p>
           </div>
-          <div className="pb-2 flex justify-between items-center">
+          <div className="pb-2 flex justify-between items-center mt-4">
             <div>
               {onSale ? (
                 <div className="text-red-600 text-lg font-bold">
@@ -43,18 +43,22 @@ function BestSellersCard({
           </div>
         </div>
       </div>
-      <div className="pt-2 hidden group-hover:block">
-        <div className="flex justify-between items-center gap-2 pt-3 border-yellow-200 border-t-2">
-          <p className="flex items-center text-xs cursor-pointer">
+      {/* footer */}
+    <div className="pt-2 w-full ">
+      {/* compare add to wishlist */}
+      <div className="absolute left-0 hidden group-hover:block py-8 px-4 h-auto w-full z-20 bg-white">
+        <div className="w-full flex justify-between items-center gap-2 pt-3 border-yellow-200 border-t-2">
+          <p className="flex justify-center items-center text-xs cursor-pointer">
             <FaCodeCompare className="rotate-[70deg] mr-2" size={15} />
-            Compare
+            Compare 
           </p>
-          <p className="flex items-center cursor-pointer">
-            <CiHeart className="mr-1" /> Wishlist
+          <p className="flex justify-end items-center cursor-pointer">
+            <CiHeart className="mr-1" /> Add to Wishlist
           </p>
         </div>
       </div>
     </div>
+  </div>
   );
 }
 

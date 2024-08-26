@@ -70,7 +70,7 @@ function RecentlyViewed() {
         arrows={false}
         centerMode={false}
         className=""
-        containerClass="container h-[420px]"
+        containerClass=" overflow-y-visible "
         customDot={<CustomDot />}
         dotListClass
         draggable

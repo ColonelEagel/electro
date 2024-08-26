@@ -5,8 +5,8 @@ import { FaRegUser, FaTruckFast } from "react-icons/fa6";
 
 function Info() {
   return (
-    <div className="lg:border-b-2 lg:border-gray-200 pb-2">
-      <Container className="flex flex-col md:flex-row items-center justify-between text-sm pt-2 font-medium">
+    <div className="lg:border-b-2 lg:border-gray-200">
+      <Container className="flex flex-col md:flex-row items-center justify-between text-sm p-2 font-medium">
         {/* Contact / Left */}
         <div className="flex flex-col md:flex-row md:gap-4">
           <p className="px-2 flex items-center">

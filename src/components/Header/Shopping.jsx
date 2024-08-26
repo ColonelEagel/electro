@@ -6,7 +6,7 @@ import Search from "@/components/Header/Search";
 
 function Shopping() {
   return (
-    <Container className="flex flex-col md:flex-row md:gap-4 justify-between items-center p-4 md:p-12">
+    <Container className="flex flex-col md:flex-row  justify-between items-center p-4 md:p-12">
       {/* Logo /Left */}
       <div className="text-2xl md:text-3xl font-bold">
         electro<span className="text-yellow-300">.</span>
